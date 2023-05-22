@@ -17,3 +17,77 @@
 'use strict';
 
 // Код возьмите из предыдущего домашнего задания
+// script19.js
+
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+// Имплементация с for loop
+for (let i = 0; i < 2; i++) {
+    const lastWatchedMovie = prompt('Один из последних просмотренных фильмов?', ''),
+        lastWatchedMovieRating = prompt('На сколько оцените его?', '');
+
+    if (lastWatchedMovie != null && lastWatchedMovieRating != null && lastWatchedMovie != '' && lastWatchedMovieRating != '' && lastWatchedMovie.length < 50) {
+        personalMovieDB.movies[lastWatchedMovie] = lastWatchedMovieRating;
+    } else {
+        console.log('error');
+        // If error, come back to ask again - increase loop counter
+        i--;
+    }
+    console.log('done');
+}
+
+
+// Имплементация с while loop
+// let i = 0;
+// while (i < 2) {
+//     const lastWatchedMovie = prompt('Один из последних просмотренных фильмов?', ''),
+//         lastWatchedMovieRating = prompt('На сколько оцените его?', '');
+
+//     if (lastWatchedMovie != null && lastWatchedMovieRating != null && lastWatchedMovie != '' && lastWatchedMovieRating != '' && lastWatchedMovie.length < 50) {
+//         personalMovieDB.movies[lastWatchedMovie] = lastWatchedMovieRating;
+//     } else {
+//         console.log('error');
+//         // If error, come back to ask again - increase loop counter
+//         i--;
+//     }
+//     console.log('done');
+//     i++;
+// }
+
+
+// Имплементация с do while loop
+// let i = 0;
+// do {
+//     const lastWatchedMovie = prompt('Один из последних просмотренных фильмов?', ''),
+//         lastWatchedMovieRating = prompt('На сколько оцените его?', '');
+
+//     if (lastWatchedMovie != null && lastWatchedMovieRating != null && lastWatchedMovie != '' && lastWatchedMovieRating != '' && lastWatchedMovie.length < 50) {
+//         personalMovieDB.movies[lastWatchedMovie] = lastWatchedMovieRating;
+//     } else {
+//         console.log('error');
+//         // If error, come back to ask again - increase loop counter
+//         i--;
+//     }
+//     console.log('done');
+//     i++;
+// } while (i < 2);
+
+
+if (personalMovieDB.count < 10) {
+    console.log('Просмотрено довольно мало фильмов');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log('Вы классический зритель');
+} else if (personalMovieDB.count >= 30) {
+    console.log('Вы киноман');
+} else {
+    console.log('Произошла ошибка');
+}
+
+console.log(personalMovieDB);
