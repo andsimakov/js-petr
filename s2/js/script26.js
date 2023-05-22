@@ -3,7 +3,7 @@
 const usdCurr = 28;
 const eurCurr = 32;
 
-function convert (amount, curr) {
+function convert(amount, curr) {
     console.log(amount * curr);
 }
 
