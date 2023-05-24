@@ -50,3 +50,24 @@ const arrow_calc = (a, b) => {
     console.log('1');
     return a + b;
 }; // More complex option
+
+
+const arrow_calc = (a, b) => a + b;
+console.log(arrow_calc(2, 2));
+
+
+const alrt = () => alert(1);
+alrt();
+
+
+var elements = [
+    'Hydrogen',
+    'Helium',
+    'Lithium',
+    'Beryllium'
+  ];
+// elements.map((element) => { return element.length; });
+elements.map(element => element.length);
+elements.map(({ "length": lengthFooBArX }) => lengthFooBArX);
+elements.map(({ length }) => length);
+
