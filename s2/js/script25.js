@@ -71,3 +71,4 @@ elements.map(element => element.length);
 elements.map(({ "length": lengthFooBArX }) => lengthFooBArX);
 elements.map(({ length }) => length);
 
+var func = () => { foo: 1 };
