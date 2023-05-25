@@ -18,7 +18,8 @@ calculateVolumeAndArea(5)  => 'Объем куба: 125, площадь всей
 calculateVolumeAndArea(15)  => 'Объем куба: 3375, площадь всей поверхности: 1350'
 calculateVolumeAndArea(15.5)  => 'При вычислении произошла ошибка'
 calculateVolumeAndArea('15')  => 'При вычислении произошла ошибка'
-calculateVolumeAndArea(-15)  => 'При вычислении произошла ошибка' */
+calculateVolumeAndArea(-15)  => 'При вычислении произошла ошибка'
+*/
 
 function calculateVolumeAndArea(edge){
     if (!Number.isInteger(edge) || edge <= 0 || typeof (edge) != 'number') {
@@ -53,7 +54,8 @@ getCoupeNumber(300)  => "Таких мест в вагоне не существ
 getCoupeNumber(0)  => "Таких мест в вагоне не существует"
 getCoupeNumber(7.7)  => "Ошибка. Проверьте правильность введенного номера места"
 getCoupeNumber(-10)  => "Ошибка. Проверьте правильность введенного номера места"
-getCoupeNumber('Hello')  => "Ошибка. Проверьте правильность введенного номера места" */
+getCoupeNumber('Hello')  => "Ошибка. Проверьте правильность введенного номера места"
+*/
 
 function getCoupeNumber(seatNumber) {
     if (typeof seatNumber != 'number' || seatNumber < 0 || !Number.isInteger(seatNumber)) {

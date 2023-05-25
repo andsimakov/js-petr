@@ -1,6 +1,5 @@
 'use strict';
 
-
 /*
 Создайте функцию, которая принимает в себя целое число минут и возвращает время
 в нужном формате строки. (Смотри пример). Обратите внимание на окончание слова "час" -
@@ -16,7 +15,8 @@
 getTimeFromMinutes(150) => "Это 2 часа и 30 минут"
 getTimeFromMinutes(50) => "Это 0 часов и 50 минут"
 getTimeFromMinutes(0) => "Это 0 часов и 0 минут"
-getTimeFromMinutes(-150) => "Ошибка, проверьте данные" */
+getTimeFromMinutes(-150) => "Ошибка, проверьте данные"
+*/
 
 function minutesToHourMinutes(minutes) {
     return {
@@ -89,7 +89,8 @@ console.log(getTimeFromMinutes(523));
 
 Пример:
 findMaxNumber(1, 5, 6.6, 11); =>  11
-findMaxNumber(1, 5, '6', '10');  =>  0 */
+findMaxNumber(1, 5, '6', '10');  =>  0
+*/
 
 function findMaxNumber(num1, num2, num3, num4) {
     let arr = [num1, num2, num3, num4];

@@ -11,9 +11,11 @@ function sayHello(name) {
 console.log(sayHello('Alex'));
 
 
-/* Создайте функцию, которая принимает в себя 1 аргумент в виде целого числа и возвращает массив из трех чисел:
-// одно на 1 меньше, сам аргумент, и число на 1 больше.
-Пример: вызов функции returnNeighboringNumbers(5) возвращает массив в виде [4, 5, 6]. */
+/* Создайте функцию, которая принимает в себя 1 аргумент в виде целого числа
+и возвращает массив из трех чисел:
+одно на 1 меньше, сам аргумент, и число на 1 больше.
+Пример: вызов функции returnNeighboringNumbers(5) возвращает массив в виде [4, 5, 6].
+*/
 function returnNeighboringNumbers(num) {
     return [num - 1, num, num + 1];
 }
@@ -36,7 +38,9 @@ console.log(returnNeighboringNumbers(2));
 Вызов функции getMathResult(10, 5) даст ответ 10---20---30---40---50
 Вызов функции getMathResult(10, '5') даст ответ 10
 Вызов функции getMathResult(10, 0) даст ответ 10
-Вызов функции getMathResult(20, -5) даст ответ 20 */
+Вызов функции getMathResult(20, -5) даст ответ 20
+*/
+
 function getMathResult(num, numRepeat) {
     if (typeof numRepeat != 'number' || numRepeat <= 0){
         return num;
