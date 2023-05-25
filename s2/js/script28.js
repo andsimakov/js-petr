@@ -34,3 +34,11 @@ console.log(Math.round(num));
 const test = '12.2px';
 console.log(parseInt(test));
 console.log(parseFloat(test));
+
+const firstName = 'Alex';
+console.log(`Hello, ${firstName}!`);
+
+// Итерирование по строке
+for (let char of 'Hello') {
+    console.log(char);
+}
