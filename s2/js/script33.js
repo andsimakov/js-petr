@@ -1,13 +1,12 @@
 'use strict';
 
 const arr = [2, 13, 26, 8, 10];
-arr.sort(); // [ 10, 13, 2, 26, 8 ] - числа принялись как строки, потому отсортировало как строки
+// arr.sort(); // [ 10, 13, 2, 26, 8 ] - числа принялись как строки, потому отсортировало как строки
 
-
-function compareNum(a, b) {
-    return a - b;
-}
-arr.sort(compareNum); // [ 2, 8, 10, 13, 26 ] - отсортировало как надо с помощью коллбека
+// function compareNum(a, b) {
+//     return a - b;
+// }
+// arr.sort(compareNum); // [ 2, 8, 10, 13, 26 ] - отсортировало как надо с помощью коллбека
 
 console.log(arr);
 // console.log(arr.length);
@@ -21,9 +20,9 @@ console.log(arr);
 // console.log(arr);
 
 // Обычно для перебора массива используют
-// arr.forEach(function(item, i, arr) {
-//     console.log(`${i}: ${item} inside array ${arr}`);
-// });
+arr.forEach(function(item, i, arr) {
+    console.log(`${i}: ${item} inside array ${arr}`);
+});
 
 
 // for (let i = 0; i < arr.length; i++) {
@@ -31,9 +30,16 @@ console.log(arr);
 // }
 
 // Но также можно использовать и это. Здесь можно использовать break и continue
-// for (let value of arr) {
-//     console.log(arr[value]);
-// }
+for (const value of arr) {
+    console.log(value);
+}
+
+const iterable = 'boa';
+// Итерация по строке
+for (let value of iterable) {
+    console.log(value);
+}
+
 
 // Сформировать массив из строки
 // const str = prompt('', '');
