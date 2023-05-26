@@ -16,12 +16,13 @@ const personalPlanPeter = {
         exp: '1 month'
     },
     showAgeAndLangs: function (plan) {
-        const languages = plan.skills.languages.join(' ').toUpperCase();
-        return `Мне ${plan.age} и я владею языками: ${languages}`;
+        const {age} = plan;
+        const {languages} = plan.skills;
+        const languageStr = languages.join(' ').toUpperCase();
+        return `Мне ${age} и я владею языками: ${languageStr}`;
     }
 };
 
-Object.defineProperties(personalPlanPeter, );
 
 /*
 Напишите функцию showExperience, которая будет принимать в себя объект
@@ -53,13 +54,13 @@ showProgrammingLangs(personalPlanPeter)  =>
 P.S. Для переноса строки используется \n в конце строки.
 */
 function showProgrammingLangs(plan) {
-    let result = '';
-    const programmingLanguages = plan.skills.programmingLangs;
-    for (let key in programmingLanguages) {
-        result = result + `Язык ${key} изучен на ${programmingLanguages[key]}\n`;
+    let str = '';
+    const {programmingLangs} = plan.skills;
+    for (let key in programmingLangs) {
+        str += `Язык ${key} изучен на ${programmingLangs[key]}\n`;
     }
 
-    return result;
+    return str;
 }
 console.log(showProgrammingLangs(personalPlanPeter));
 
