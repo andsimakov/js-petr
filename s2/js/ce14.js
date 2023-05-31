@@ -46,5 +46,19 @@ sortStudentsByGroups(students)  =>
 const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
 
 function sortStudentsByGroups(arr) {
+    let resultArr = [];
+    let sortedArr = arr.sort();
 
+    for (let i = 0; i < sortedArr.length - (sortedArr.length % 3); i++){
+        resultArr.push(sortedArr.splice(0, 3));
+    }
+    if (sortedArr.length > 0) {
+        resultArr.push(`Оставшиеся студенты: ${sortedArr.join(', ')}`);
+    } else {
+        resultArr.push('Оставшиеся студенты: -');
+    }
+
+    return resultArr;
 }
+
+console.log(sortStudentsByGroups(students));
