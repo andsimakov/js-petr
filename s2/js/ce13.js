@@ -73,9 +73,11 @@ const shoppingMallData = {
 // Implemeted separated functions
 function getTotalArea(data) {
     let totalArea = 0;
-    for (let i = 0; i < data.shops.length; i++) {
-        totalArea = totalArea + (data.shops[i].width * data.shops[i].length);
-    }
+
+    data.shops.forEach(shop => {
+        totalArea += shop.width * shop.length;
+    });
+
     return totalArea;
 }
 
