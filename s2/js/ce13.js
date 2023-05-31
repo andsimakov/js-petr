@@ -63,10 +63,14 @@ const shoppingMallData = {
     }
 };
 
+// ^^^ Implemented methods inside object
+
 // console.log(shoppingMallData.getTotalArea());
 // console.log(shoppingMallData.getTotalVolume());
 // console.log(shoppingMallData.isSufficientBudget());
 
+
+// Implemeted separated functions
 function getTotalArea(data) {
     let totalArea = 0;
     for (let i = 0; i < data.shops.length; i++) {
