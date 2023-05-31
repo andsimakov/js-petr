@@ -15,6 +15,28 @@ const bool = true; // or false
 let und;
 console.log(und); // undefined
 
+function hello() {
+    console.log('Hello World');
+}
+
+hello();
+
+function hi() {
+    console.log('Hi!');
+    debugger;
+}
+
+hi();
+
+const arrr = [1, 14, 4, 30, 54],
+    sorted = arrr.sort(compareNum);
+
+function compareNum(a, b) {
+    return a - b;
+}
+
+console.log(sorted);
+
 const obj = {
     name: 'John',
     age: 25,
