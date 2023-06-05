@@ -1,14 +1,14 @@
 'use strict';
 
-const box = document.getElementById('box');
-
-console.log(box);
 
 // Старые методы получения элементов из DOM
 // Поиск по id объекта
-const buttons = document.getElementsByTagName('button');
+const box = document.getElementById('box');
+console.log(box);
+
+const btns = document.getElementsByTagName('button');
 // const buttons = document.getElementsByTagName('button')[1];
-console.log(buttons[1]);
+console.log(btns[1]);
 
 // Поиск по классу объекта
 const circles = document.getElementsByClassName('circle');
