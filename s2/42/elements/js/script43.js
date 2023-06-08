@@ -16,7 +16,7 @@ box.style.cssText = 'background-color: blue; width: 500px';
 btns[1].style.borderRadius = '100%';
 circles[0].style.backgroundColor = 'red';
 
-// Можно итерирлваться так, но это общий случай
+// Можно итерироваться так, но это общий случай
 // for (let i = 0; i < hearts.length; i++) {
 //     hearts[i].style.backgroundColor = 'blue';
 // }
