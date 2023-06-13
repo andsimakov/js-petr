@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 newFilm = `${newFilm.substring(0, 22)}&hellip;`;
             }
 
-            // 4. Вывовдим в консоль сообщение при отмеченном чекбоксе
+            // 4. Выводим в консоль сообщение при отмеченном чекбоксе
             if (favorite) {
                 console.log('Добавляем любимый фильм');
             }
