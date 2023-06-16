@@ -47,9 +47,9 @@ btns[0].addEventListener('click', () => {
 // Делегирование события с родителя на его потомки по условию
 wrapper.addEventListener('click', (e) => {
     // console.dir(e.target);
-    // if (e.target && e.target.classList.contains('blue')) {
+    if (e.target && e.target.classList.contains('blue')) {
     // if (e.target && e.target.tagName == 'BUTTON') {
-    if (e.target && e.target.matches('button.red')) {
+    // if (e.target && e.target.matches('button.red')) {
         console.log('Hello');
     }
 });
