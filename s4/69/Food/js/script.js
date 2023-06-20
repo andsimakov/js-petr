@@ -41,22 +41,34 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // Timer
-    const deadline = '2023-06-22';
+    const deadline = '2023-06-12';
 
     function getTimeRemaining(endtime) {
-        const t = Date.parse(endtime) - Date.parse(new Date()),
+        let days, hours, minutes, seconds;
+        const t = Date.parse(endtime) - Date.parse(new Date());
+
+        // Обход случая когда deadline в прошлом, чтобы таймер не был отрицательным, показ нулей
+        if (t <= 0) {
+            days = 0;
+            hours = 0;
+            minutes = 0;
+            seconds = 0;
+        } else {
             days = Math.floor(t / (1000 * 60 * 60 * 24)),
             hours = Math.floor((t / (1000 * 60 * 60) % 24)),
             minutes = Math.floor((t / 1000 / 60) % 60),
             seconds = Math.floor((t / 1000) % 60);
+        }
 
-        return {
-            'total': t,
-            'days': days,
-            'hours': hours,
-            'minutes': minutes,
-            'seconds': seconds
-        };
+        // return {
+        //     'total': t,
+        //     'days': days,
+        //     'hours': hours,
+        //     'minutes': minutes,
+        //     'seconds': seconds
+        // };
+        // или
+        return {t, days, hours, minutes, seconds};
     }
 
     function setClock(selector, endtime) {
